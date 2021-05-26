@@ -29,21 +29,21 @@ cases in the relevant code comments.
 
   Inputs:
   
-* d       The 2D data raw image - assumes a Double\Single-precision floating-point, uint8 or unit16 array. Please note that the code
+* d  -    The 2D data raw image - assumes a Double\Single-precision floating-point, uint8 or unit16 array. Please note that the code
          casts the raw image to uint16 if needed.  If the image dynamic range is between 0 and 1, I multiplied to fit uint16. This might not be
          optimal for generic use, so modify according to your needs.
-* thres    A number between 0 and max(raw_image(:)) to remove  background
-* filt     A filter matrix used to smooth the image. The filter size should correspond the characteristic size of the peaks
-* edg      A number>1 for skipping the first few and the last few 'edge' pixels
-* res      A handle that switches between two peak finding methods:  1 - the local maxima method (default). 2 - the weighted centroid sub-pixel resolution method.
+* thres -    A number between 0 and max(raw_image(:)) to remove  background
+* filt -     A filter matrix used to smooth the image. The filter size should correspond the characteristic size of the peaks
+* edg -       A number>1 for skipping the first few and the last few 'edge' pixels
+* res -       A handle that switches between two peak finding methods:  1 - the local maxima method (default). 2 - the weighted centroid sub-pixel resolution method.
          Note that the latter method takes ~20% more time on average.
-* fid     In case the user would like to save the peak positions to a file, the code assumes a "fid = fopen([filename], 'w+');" line in the
+* fid -      In case the user would like to save the peak positions to a file, the code assumes a "fid = fopen([filename], 'w+');" line in the
         script that uses this function.
 
 Optional Outputs:
 
- * cent        a 1xN vector of coordinates of peaks (x1,y1,x2,y2,...
- * [cent cm]   in addition to cent, cm is a binary matrix  of size(d) with 1's for peak positions. (not supported in the weighted centroid sub-pixel resolution method)
+ * cent  -        a 1xN vector of coordinates of peaks (x1,y1,x2,y2,...
+ * [cent cm]  -   in addition to cent, cm is a binary matrix  of size(d) with 1's for peak positions. (not supported in the weighted centroid sub-pixel resolution method)
 
 Example:
 
