@@ -5,7 +5,9 @@ A simple and fast 2D peak finder. The aim was to be faster than more sophisticat
 The code requires Matlab's Image Processing Toolbox, and can be used inside parfor for faster processing times.
 
 
-please cite As
+please cite As:
+
+
 Natan (2021). Fast 2D peak finder (https://www.mathworks.com/matlabcentral/fileexchange/37388-fast-2d-peak-finder), MATLAB Central File Exchange. Retrieved May 26, 2021.
 
 
