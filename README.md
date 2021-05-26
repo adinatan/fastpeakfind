@@ -13,19 +13,17 @@ Natan (2021). Fast 2D peak finder (https://www.mathworks.com/matlabcentral/filee
 
 
 
-Analyze noisy 2D images and find peaks using local maxima (1 pixel resolution) or weighted centroids (sub-pixel resolution).
-The code is designed to be as fast as possible, so I kept it pretty basic.  The code assumes that the peaks are relatively sparse, test whether there
-% is too much pile up and set threshold or user defined filter accordingly.
 
 How the code works:
 In theory, each peak is a smooth point spread function (SPF), like a Gaussian of some size, etc. In reality, there is always noise, such as
-"salt and pepper" noise, which typically has a 1 pixel variation.  Because the peak's PSF is assumed to be larger than 1 pixel, the "true"
-local maximum of that PSF can be obtained if we can get rid of these single pixel noise variations. There comes medfilt2, which is a 2D median
+"salt and pepper" noise, which typically has a 1-pixel variation.  Because the peak's PSF is assumed to be larger than 1 pixel, the "true"
+local maximum of that PSF can be obtained if we can get rid of these single-pixel noise variations. There comes medfilt2, which is a 2D median
 filter that gets rid of "salt and pepper" noise. Next we "smooth" the image using conv2, so that with high probability there will be only one
 pixel in each peak that will correspond to the "true" PSF local maximum. The weighted centroid approach uses the same image processing, with the
 difference that it just calculated the weighted centroid of each connected object that was obtained following the image processing.  While
-this gives sub-pixel resolution, it can miss peaks that are very close to each other, and runs slightly slower. Read more about how to treat these
-cases in the relevant code commentes.
+this gives sub-pixel resolution, it can overlook peaks that are very close to each other, and runs slightly slower. Read more about how to treat these
+cases in the relevant code comments.
+
 
   Inputs:
   
@@ -43,9 +41,7 @@ fid     In case the user would like to save the peak positions to a file, the co
 Optional Outputs:
 
  cent        a 1xN vector of coordinates of peaks (x1,y1,x2,y2,...
- [cent cm]   in addition to cent, cm is a binary matrix  of size(d)
-             with 1's for peak positions. (not supported in the
-             the weighted centroid sub-pixel resolution method)
+ [cent cm]   in addition to cent, cm is a binary matrix  of size(d) with 1's for peak positions. (not supported in the weighted centroid sub-pixel resolution method)
 
 Example:
 
