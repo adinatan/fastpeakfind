@@ -45,6 +45,6 @@ Optional Outputs:
 
 Example:
 
-   p=FastPeakFind(image);
-   imagesc(image); hold on
-   plot(p(1:2:end),p(2:2:end),'r+')
+>   p=FastPeakFind(image);
+>   imagesc(image); hold on
+>   plot(p(1:2:end),p(2:2:end),'r+')
