@@ -1,5 +1,5 @@
 # fastpeakfind
-
+[![View Fast 2D peak finder on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/37388-fast-2d-peak-finder)
 A simple and fast 2D peak finder. The aim was to be faster than more sophisticated techniques yet good enough to find peaks in noisy data. The code analyzes noisy 2D images and find peaks using robust local maxima finder (1 pixel resolution) or by weighted centroids (sub-pixel resolution). The code is designed to be as fast as possible, so I kept it pretty basic. It best works when using uint16 \ uint8 images, and assumes that peaks are relatively sparse.
 
 The code requires Matlab's Image Processing Toolbox, and can be used inside parfor for faster processing times.
