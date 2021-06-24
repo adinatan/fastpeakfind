@@ -52,3 +52,5 @@ Example:
 >   imagesc(image); hold on
 >   
 >   plot(p(1:2:end),p(2:2:end),'r+')
+
+  ![Fig1](https://github.com/adinatan/fastpeakfind/blob/master/fpfd.png)
