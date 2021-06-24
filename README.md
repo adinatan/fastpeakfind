@@ -53,4 +53,4 @@ Example:
 >   
 >   plot(p(1:2:end),p(2:2:end),'r+')
 
-  !(https://github.com/adinatan/fastpeakfind/blob/main/fpf.png)
+  !(Fig1)(https://github.com/adinatan/fastpeakfind/blob/main/fpf.png)
