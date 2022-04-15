@@ -87,6 +87,12 @@ if (nargin < 6)
 else
     savefileflag = true;
 end
+
+% check thres is a scalar
+if numel(thres)>1
+    error('thershold has to be a scalar');
+end
+
 %% Analyze image
 if any(d(:)) %for the case of non zero raw image
     
