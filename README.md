@@ -10,9 +10,7 @@ The code requires Matlab's Image Processing Toolbox, and can be used inside parf
 please cite As:
 
 
-Natan, Adi. "Fast 2D peak finder." MATLAB Central File Exchange. Available at https://www. mathworks. com/matlabcentral/fileexchange/37388-fast-2d-peak-finder (2021)
-
-
+Natan, Adi. "Fast 2D peak finder." MATLAB Central File Exchange. Available at https://www.mathworks.com/matlabcentral/fileexchange/37388-fast-2d-peak-finder (2021)
 
 
 
